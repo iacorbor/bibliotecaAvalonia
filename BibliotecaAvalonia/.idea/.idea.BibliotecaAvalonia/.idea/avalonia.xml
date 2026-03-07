@@ -4,6 +4,8 @@
     <option name="projectPerEditor">
       <map>
         <entry key="BibliotecaAvalonia/Views/CrearArticuloView.axaml" value="BibliotecaAvalonia/BibliotecaAvalonia.csproj" />
+        <entry key="BibliotecaAvalonia/Views/CrearArticuloWindow.axaml" value="BibliotecaAvalonia/BibliotecaAvalonia.csproj" />
+        <entry key="BibliotecaAvalonia/Views/DetalleArticuloWindow.axaml" value="BibliotecaAvalonia/BibliotecaAvalonia.csproj" />
         <entry key="BibliotecaAvalonia/Views/MainWindow.axaml" value="BibliotecaAvalonia/BibliotecaAvalonia.csproj" />
       </map>
     </option>

@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace BibliotecaAvalonia.Views;
 
-public partial class DetalleArticuloView : Window
+public partial class DetalleArticuloWindow : Window
 {
-    public DetalleArticuloView()
+    public DetalleArticuloWindow()
     {
         InitializeComponent();
     }
