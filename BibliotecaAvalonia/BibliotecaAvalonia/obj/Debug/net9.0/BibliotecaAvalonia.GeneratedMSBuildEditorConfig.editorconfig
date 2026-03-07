@@ -17,20 +17,20 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BibliotecaAvalonia
-build_property.ProjectDir = C:\Users\israb\RiderProjects\BibliotecaAvalonia\BibliotecaAvalonia\
+build_property.ProjectDir = C:\Users\israb\Documents\2DAM\D_Interfaces\bibliotecaAvalonia\BibliotecaAvalonia\BibliotecaAvalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/israb/RiderProjects/BibliotecaAvalonia/BibliotecaAvalonia/App.axaml]
+[C:/Users/israb/Documents/2DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/israb/RiderProjects/BibliotecaAvalonia/BibliotecaAvalonia/Views/CrearArticuloView.axaml]
+[C:/Users/israb/Documents/2DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/CrearArticuloView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/israb/RiderProjects/BibliotecaAvalonia/BibliotecaAvalonia/Views/DetalleArticuloView.axaml]
+[C:/Users/israb/Documents/2DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/DetalleArticuloView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/israb/RiderProjects/BibliotecaAvalonia/BibliotecaAvalonia/Views/MainWindow.axaml]
+[C:/Users/israb/Documents/2DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

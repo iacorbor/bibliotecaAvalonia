@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\israb\\RiderProjects\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj": {}
+    "C:\\Users\\israb\\Documents\\2DAM\\D_Interfaces\\bibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\israb\\RiderProjects\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj": {
+    "C:\\Users\\israb\\Documents\\2DAM\\D_Interfaces\\bibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\israb\\RiderProjects\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj",
+        "projectUniqueName": "C:\\Users\\israb\\Documents\\2DAM\\D_Interfaces\\bibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj",
         "projectName": "BibliotecaAvalonia",
-        "projectPath": "C:\\Users\\israb\\RiderProjects\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj",
+        "projectPath": "C:\\Users\\israb\\Documents\\2DAM\\D_Interfaces\\bibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia.csproj",
         "packagesPath": "C:\\Users\\israb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\israb\\RiderProjects\\BibliotecaAvalonia\\BibliotecaAvalonia\\obj\\",
+        "outputPath": "C:\\Users\\israb\\Documents\\2DAM\\D_Interfaces\\bibliotecaAvalonia\\BibliotecaAvalonia\\BibliotecaAvalonia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -8,6 +8,14 @@ namespace BibliotecaAvalonia.ViewModels
     {
         public ObservableCollection<Articulo> Articulos { get; set; }
 
+        public Articulo? _articuloseleccionado;
+
+        public Articulo? ArticuloSeleccionado
+        {
+            get => _articuloseleccionado;
+            set => SetProperty(ref _articuloseleccionado, value);
+        }
+
         public MainWindowViewModel()
         {
             Articulos = new ObservableCollection<Articulo>();

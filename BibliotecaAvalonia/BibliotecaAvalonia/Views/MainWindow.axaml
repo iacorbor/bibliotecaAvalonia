@@ -3,15 +3,41 @@
         xmlns:vm="using:BibliotecaAvalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:BibliotecaAvalonia.Models"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="BibliotecaAvalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="BibliotecaAvalonia">
 
-        <StackPanel Margin="20" Spacing="10">
-                <TextBlock Text="Catalogo de artículos" FontSize="24" FontWeight="Bold"></TextBlock>
-                <ListBox ItemsSource="{Binding Articulos}" Height="300"></ListBox>
-        </StackPanel>
+        <Grid RowDefinitions="Auto,Auto,*,Auto" Margin="20">
+                <TextBlock Grid.Row="0" Text="Catálogo de Artículos" FontSize="24" FontWeight="Bold" Margin="0,0,0,15"></TextBlock>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="10" Margin="0,0,0,15">
+                        <Button Content="Añadir"></Button>
+                        <Button Content="Editar"></Button>
+                        <Button Content="Eliminar"></Button>
+                        <Button Content="Exportar CSV"></Button>
+                </StackPanel>
+                <ListBox Grid.Row="2" ItemsSource="{Binding Articulos}" SelectedItem="{Binding ArticuloSeleccionado}">
+                        <ListBox.ItemTemplate>
+                                <DataTemplate DataType="models:Articulo">
+                                        <Border Padding="10" Margin="0,0,0,8">
+                                                <StackPanel Spacing="4">
+                                                        <TextBlock Text="{Binding Titulo}" FontSize="18" FontWeight="Bold"></TextBlock>
+                                                        <TextBlock Text="{Binding Anio, StringFormat='Año: {0}'}"></TextBlock>
+                                                        <TextBlock Text="{Binding FechaAdquisicion, StringFormat='Fecha de adquisicion: {0:dd/MM/yyyy}'}"></TextBlock>
+                                                </StackPanel>
+                                        </Border>
+                                </DataTemplate>
+                        </ListBox.ItemTemplate>
+                </ListBox>
+                <Border Grid.Row="3" Margin="0,15,0,0" Padding="10">
+                        <StackPanel Spacing="5">
+                                <TextBlock Text="Artículo seleccionado" FontWeight="Bold" FontSize="16"></TextBlock>
+                                <TextBlock Text="{Binding ArticuloSeleccionado.Titulo, FallbackValue='Ninguno'}"></TextBlock>
+                                <TextBlock Text="{Binding ArticuloSeleccionado.Anio, StringFormat='Año: {0}', FallbackValue='Año: -'}"></TextBlock>
+                        </StackPanel>
+                </Border>
+        </Grid>
         
 </Window>
