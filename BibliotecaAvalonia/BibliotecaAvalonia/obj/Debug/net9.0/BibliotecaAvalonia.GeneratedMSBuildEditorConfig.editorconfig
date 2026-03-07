@@ -27,8 +27,11 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/CrearArticuloWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/DetalleArticuloWindow.axaml]
+[C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/MainWindow.axaml]
+[C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/ValorarArticuloWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/israb/Documents/2 DAM/D_Interfaces/bibliotecaAvalonia/BibliotecaAvalonia/BibliotecaAvalonia/Views/VerValoracionesWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

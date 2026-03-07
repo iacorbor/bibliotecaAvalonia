@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BibliotecaAvalonia.ViewModels"
+        x:Class="BibliotecaAvalonia.Views.ValorarArticuloWindow"
+        x:DataType="vm:ValorarArticuloViewModel"
+        Title="Valorar artículo"
+        Width="400"
+        Height="400">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Usuario Id"/>
+        <TextBox Text="{Binding usuarioId}"/>
+
+        <TextBlock Text="Puntuación (0-10)"/>
+        <TextBox Text="{Binding puntuacion}"/>
+
+        <TextBlock Text="Comentario"/>
+        <TextBox Text="{Binding comentario}"
+                 AcceptsReturn="True"
+                 Height="100"/>
+
+        <TextBlock Text="{Binding mensajeError}"
+                   Foreground="Red"
+                   TextWrapping="Wrap"/>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="10">
+
+            <Button Content="Guardar"
+                    Click="Guardar_Click"/>
+
+            <Button Content="Cancelar"
+                    Click="Cancelar_Click"/>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>

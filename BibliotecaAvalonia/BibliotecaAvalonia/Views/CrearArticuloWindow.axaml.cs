@@ -1,6 +1,6 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using BibliotecaAvalonia.Models;
 using BibliotecaAvalonia.ViewModels;
 
 namespace BibliotecaAvalonia.Views
@@ -15,8 +15,17 @@ namespace BibliotecaAvalonia.Views
             DataContext = new CrearArticuloViewModel();
         }
 
+        public CrearArticuloWindow(Articulo articulo)
+        {
+            InitializeComponent();
+            DataContext = new CrearArticuloViewModel(articulo);
+        }
+
         private void Guardar_Click(object? sender, RoutedEventArgs e)
         {
+            if (!ViewModel.ValidarDatos())
+                return;
+
             Close(true);
         }
 

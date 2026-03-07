@@ -1,53 +1,66 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BibliotecaAvalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="clr-namespace:BibliotecaAvalonia.ViewModels"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d"
         x:Class="BibliotecaAvalonia.Views.CrearArticuloWindow"
         x:DataType="vm:CrearArticuloViewModel"
-        Title="CrearArticuloWindow">
-    
-        <ScrollViewer>
-                <StackPanel Margin="20" Spacing="10">
+        Title="Crear artículo"
+        Width="500"
+        Height="700">
 
-                        <TextBlock Text="Crear artículo" FontSize="22" FontWeight="Bold"/>
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
 
-                        <TextBlock Text="Tipo de artículo"/>
-                        <ComboBox ItemsSource="{Binding TiposArticulo}" SelectedIndex="{Binding TipoSeleccionado}"/>
+            <TextBlock Text="Crear / Editar artículo"
+                       FontSize="22"
+                       FontWeight="Bold"/>
 
-                        <TextBlock Text="Título"/>
-                        <TextBox Text="{Binding Titulo}"/>
+            <TextBlock Text="Tipo de artículo"/>
+            <ComboBox ItemsSource="{Binding tiposArticulo}"
+                      SelectedIndex="{Binding tipoSeleccionado}"/>
 
-                        <TextBlock Text="Año"/>
-                        <TextBox Text="{Binding AnioTexto}"/>
+            <TextBlock Text="Título"/>
+            <TextBox Text="{Binding titulo}"/>
 
-                        <TextBlock Text="Fecha de adquisición"/>
-                        <DatePicker SelectedDate="{Binding FechaAdquisicion}"/>
+            <TextBlock Text="Año"/>
+            <TextBox Text="{Binding anioTexto}"/>
 
-                        <TextBlock Text="Autor"/>
-                        <TextBox Text="{Binding Autor}"/>
+            <TextBlock Text="Fecha de adquisición"/>
+            <DatePicker SelectedDate="{Binding fechaAdquisicion}"/>
 
-                        <StackPanel IsVisible="{Binding EsLibro}" Spacing="10">
-                                <TextBlock Text="ISBN"/>
-                                <TextBox Text="{Binding Isbn}"/>
+            <TextBlock Text="Autor"/>
+            <TextBox Text="{Binding autor}"/>
 
-                                <CheckBox Content="Prestado" IsChecked="{Binding Prestado}"/>
-                        </StackPanel>
+            <StackPanel IsVisible="{Binding esLibro}" Spacing="10">
+                <TextBlock Text="ISBN"/>
+                <TextBox Text="{Binding isbn}"/>
 
-                        <StackPanel IsVisible="{Binding EsAudiolibro}" Spacing="10">
-                                <TextBlock Text="Fecha inicio disponibilidad"/>
-                                <DatePicker SelectedDate="{Binding FechaInicioDisp}"/>
+                <CheckBox Content="Prestado"
+                          IsChecked="{Binding prestado}"/>
+            </StackPanel>
 
-                                <TextBlock Text="Fecha fin disponibilidad"/>
-                                <DatePicker SelectedDate="{Binding FechaFinDisp}"/>
-                        </StackPanel>
+            <StackPanel IsVisible="{Binding esAudiolibro}" Spacing="10">
+                <TextBlock Text="Fecha inicio disponibilidad"/>
+                <DatePicker SelectedDate="{Binding fechaInicioDisp}"/>
 
-                        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Margin="0,20,0,0">
-                                <Button Content="Guardar" Click="Guardar_Click"/>
-                                <Button Content="Cancelar" Click="Cancelar_Click"/>
-                        </StackPanel>
+                <TextBlock Text="Fecha fin disponibilidad"/>
+                <DatePicker SelectedDate="{Binding fechaFinDisp}"/>
+            </StackPanel>
 
-                </StackPanel>
-        </ScrollViewer>
+            <TextBlock Text="{Binding mensajeError}"
+                       Foreground="Red"
+                       TextWrapping="Wrap"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="10"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,0">
+                <Button Content="Guardar" Click="Guardar_Click"/>
+                <Button Content="Cancelar" Click="Cancelar_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
 </Window>

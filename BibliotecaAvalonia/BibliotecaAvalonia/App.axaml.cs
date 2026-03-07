@@ -4,6 +4,7 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
+using BibliotecaAvalonia.Services;
 using BibliotecaAvalonia.ViewModels;
 using BibliotecaAvalonia.Views;
 
@@ -14,6 +15,7 @@ public partial class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
+        DatabaseService.Inicializar();
     }
 
     public override void OnFrameworkInitializationCompleted()

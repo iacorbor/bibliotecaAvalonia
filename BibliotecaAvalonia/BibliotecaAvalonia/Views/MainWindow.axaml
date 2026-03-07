@@ -9,6 +9,7 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="BibliotecaAvalonia">
+
     <Window.DataTemplates>
         <DataTemplate DataType="models:Libro">
             <Border BorderThickness="1" CornerRadius="8" Padding="10" Margin="0,0,0,8">
@@ -20,10 +21,11 @@
                     <TextBlock Text="{Binding anio, StringFormat='Año: {0}'}"/>
                     <TextBlock Text="{Binding fechaAdquisicion, StringFormat='Fecha adquisición: {0:dd/MM/yyyy}'}"/>
                     <TextBlock Text="{Binding prestado, StringFormat='Prestado: {0}'}"/>
+                    <TextBlock Text="{Binding mediaTexto, StringFormat='Media: {0}'}"/>
                 </StackPanel>
             </Border>
         </DataTemplate>
-        
+
         <DataTemplate DataType="models:AudioLibro">
             <Border BorderThickness="1" CornerRadius="8" Padding="10" Margin="0,0,0,8">
                 <StackPanel Spacing="4">
@@ -34,27 +36,62 @@
                     <TextBlock Text="{Binding fechaAdquisicion, StringFormat='Fecha adquisición: {0:dd/MM/yyyy}'}"/>
                     <TextBlock Text="{Binding fechaInicioDisp, StringFormat='Inicio disponibilidad: {0:dd/MM/yyyy}'}"/>
                     <TextBlock Text="{Binding fechaFinDisp, StringFormat='Fin disponibilidad: {0:dd/MM/yyyy}'}"/>
+                    <TextBlock Text="{Binding mediaTexto, StringFormat='Media: {0}'}"/>
+                    <TextBlock Text="{Binding mensajeDescarga}"/>
                 </StackPanel>
             </Border>
         </DataTemplate>
-        
     </Window.DataTemplates>
-    
-    <Grid RowDefinitions="Auto,Auto,*,Auto" Margin="20">
-        <TextBlock Grid.Row="0" Text="Catálogo de artículos" FontSize="24" FontWeight="Bold" Margin="0,0,0,15"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="10" Margin="0,0,0,15">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" Margin="20">
+        <TextBlock Grid.Row="0"
+                   Text="Catálogo de artículos"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,15"/>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Spacing="10"
+                    Margin="0,0,0,15">
             <Button Content="Añadir" Click="Anadir_Click"/>
-            <Button Content="Editar"/>
+            <Button Content="Editar" Click="Editar_Click"/>
             <Button Content="Eliminar" Command="{Binding EliminarArticuloCommand}"/>
-            <Button Content="Exportar CSV"/>
+            <Button Content="Prestar / Devolver" Command="{Binding CambiarPrestamoCommand}"/>
+            <Button Content="Descargar audio" Command="{Binding DescargarAudiolibroCommand}"/>
+            <Button Content="Ver valoraciones" Click="VerValoraciones_Click"/>
+            <Button Content="Valorar" Click="Valorar_Click"/>
+            <Button Content="Exportar CSV" Click="Exportar_Click"/>
         </StackPanel>
-        <ListBox Grid.Row="2" ItemsSource="{Binding Articulos}" SelectedItem="{Binding ArticuloSeleccionado}" />
-        <Border Grid.Row="3" BorderThickness="1" CornerRadius="8" Padding="10" Margin="0,15,0,0">
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Spacing="10"
+                    Margin="0,0,0,15">
+            <TextBox Width="250"
+                     Watermark="Buscar por título o autor"
+                     Text="{Binding textoBusqueda}"/>
+
+            <ComboBox Width="150"
+                      ItemsSource="{Binding tiposFiltro}"
+                      SelectedIndex="{Binding tipoFiltroSeleccionado}"/>
+        </StackPanel>
+
+        <ListBox Grid.Row="3"
+                 ItemsSource="{Binding Articulos}"
+                 SelectedItem="{Binding ArticuloSeleccionado}" />
+
+        <Border Grid.Row="4"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="10"
+                Margin="0,15,0,0">
             <StackPanel Spacing="8">
-                <TextBlock Text="Artículo seleccionado" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="Artículo seleccionado"
+                           FontWeight="Bold"
+                           FontSize="16"/>
                 <ContentControl Content="{Binding ArticuloSeleccionado}" />
             </StackPanel>
         </Border>
-
     </Grid>
 </Window>

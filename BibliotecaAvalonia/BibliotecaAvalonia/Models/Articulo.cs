@@ -8,6 +8,7 @@ public abstract class Articulo
     public string titulo { get; set; }
     public int anio { get; set; }
     public DateTime fechaAdquisicion { get; set; }
+    
 
     protected Articulo()
     {
@@ -25,6 +26,18 @@ public abstract class Articulo
     public override string ToString()
     {
         return $" {id} // {titulo} ({anio}) - {fechaAdquisicion}";
+    }
+    public double mediaValoraciones { get; set; }
+
+    public string mediaTexto
+    {
+        get
+        {
+            if (mediaValoraciones == 0)
+                return "Sin valoraciones";
+
+            return mediaValoraciones.ToString("0.0");
+        }
     }
 
 }
